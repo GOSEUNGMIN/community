@@ -25,8 +25,8 @@
           return false;
         }
 
-        if (name.length < 3 || name.length > 8) {
-          alert("이름은 3 ~ 8 글자 사이여야 합니다.")
+        if (name.length < 2 || name.length > 4) {
+          alert("이름은 2 ~ 4 글자 사이여야 합니다.")
           return false;
         }
 
@@ -42,7 +42,7 @@
       </div>
       <div class="body">
         <form
-          th:action="@{/member/insertForm}"
+          th:action="@{/member/insert}"
           th:object="${memberDto}"
           method="post"
           onsubmit="return formCheck();"
